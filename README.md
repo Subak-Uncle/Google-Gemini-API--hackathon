@@ -11,11 +11,14 @@ Google의 Gemini API를 사용하여 이미지를 분석하고, TMDB(The Movie D
 - 이미지 분석을 통한 닮은 연예인 찾기(이름으로 결과가 나옵니다.)
 - 찾은 연예인의 이미지 표시(결과로 나온 이름을 이용해 이미지를 검색 후 표시합니다.)
 
+<br />
+
 ## 결과물 미리 보기
 ![스크린샷 2024-08-04 오후 1 59 15](https://github.com/user-attachments/assets/fd3f1584-c446-4010-9e4c-ffbe25c8714b)
 ![스크린샷 2024-08-04 오후 1 59 29](https://github.com/user-attachments/assets/5568adf1-9501-4a98-9cbe-cd3cb6ff3ade)
 ![스크린샷 2024-08-04 오후 1 59 44](https://github.com/user-attachments/assets/3049d899-aa8b-402b-952f-cf8ecc0bee62)
 
+<br />
 
 ## 사전 세팅
 
@@ -41,6 +44,9 @@ Google의 Gemini API를 사용하여 이미지를 분석하고, TMDB(The Movie D
 REACT_APP_GEMINI_API_KEY=your_gemini_api_key_here
 REACT_APP_TMDB_API_KEY=your_tmdb_api_key_here
 ```
+
+<br />
+
 
 ## 서비스 이용 방법
 
