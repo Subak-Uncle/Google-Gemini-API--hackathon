@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+# 닮은 연예인 찾기 웹 애플리케이션
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## 서비스 소개
 
-In the project directory, you can run:
+이 프로젝트는 사용자가 업로드한 이미지를 분석하여 닮은 연예인을 찾아주는 웹 애플리케이션입니다. 
+Google의 Gemini API를 사용하여 이미지를 분석하고, TMDB(The Movie Database) API를 통해 연예인의 정보와 이미지를 가져옵니다.
 
-### `npm start`
+주요 기능:
+- 사용자 이미지 업로드
+- 이미지 분석을 통한 닮은 연예인 찾기(이름으로 결과가 나옵니다.)
+- 찾은 연예인의 이미지 표시(결과로 나온 이름을 이용해 이미지를 검색 후 표시합니다.)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 결과물 미리 보기
+![스크린샷 2024-08-04 오후 1 59 15](https://github.com/user-attachments/assets/fd3f1584-c446-4010-9e4c-ffbe25c8714b)
+![스크린샷 2024-08-04 오후 1 59 29](https://github.com/user-attachments/assets/5568adf1-9501-4a98-9cbe-cd3cb6ff3ade)
+![스크린샷 2024-08-04 오후 1 59 44](https://github.com/user-attachments/assets/3049d899-aa8b-402b-952f-cf8ecc0bee62)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## 사전 세팅
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 필요한 API 키
 
-### `npm run build`
+1. Google Gemini API 키
+2. TMDB API 키
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### API 키 발급 방법
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Google Gemini API 키 발급:
+   - [Google AI Studio](https://makersuite.google.com/app/apikey)에 접속합니다.
+   - Google 계정으로 로그인 후, API 키를 생성합니다.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. TMDB API 키 발급:
+   - [TMDB 웹사이트](https://www.themoviedb.org/)에 가입합니다.
+   - 설정 > API > API 키 요청에서 새로운 API 키를 발급받습니다.
 
-### `npm run eject`
+### .env 설정
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+프로젝트 루트 디렉토리에 `.env` 파일을 생성하고 다음과 같이 API 키를 설정합니다:
+```
+REACT_APP_GEMINI_API_KEY=your_gemini_api_key_here
+REACT_APP_TMDB_API_KEY=your_tmdb_api_key_here
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 서비스 이용 방법
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. 프로젝트를 클론하고 필요한 패키지를 설치합니다:
+```bash
+git clone https://github.com/Subak-Uncle/Google-Gemini-API--hackathon
+cd [project_directory]
+npm install
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. `.env` 파일을 설정합니다.
 
-## Learn More
+3. 애플리케이션을 실행합니다:
+```bash
+npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. 웹 브라우저에서 `http://localhost:3000`으로 접속합니다.
+   ![Pasted image 20240804140526](https://github.com/user-attachments/assets/2d5c64cf-1e6a-4ac6-ab40-90765d68c08c)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+5. "업로드" 버튼을 클릭하여 이미지를 선택합니다.
+   ![Pasted image 20240804140702](https://github.com/user-attachments/assets/a7d67fc7-7c14-4c73-bb0a-95570d6053d6)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+6. "결과 보기" 버튼을 클릭하여 닮은 연예인을 찾습니다.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+7. 분석 결과로 닮은 연예인의 이름과 이미지가 표시됩니다.
+   ![Pasted image 20240804140731](https://github.com/user-attachments/assets/239b2c01-2d02-4252-a80a-613a93b8b09e)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+> 주의: 이미지 분석에는 약간의 시간이 소요될 수 있습니다. 분석 중에는 "분석 중..." 메시지가 표시됩니다.
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
