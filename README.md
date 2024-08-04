@@ -14,9 +14,9 @@ Google의 Gemini API를 사용하여 이미지를 분석하고, TMDB(The Movie D
 <br />
 
 ## 결과물 미리 보기
-![스크린샷 2024-08-04 오후 1 59 15](https://github.com/user-attachments/assets/fd3f1584-c446-4010-9e4c-ffbe25c8714b)
-![스크린샷 2024-08-04 오후 1 59 29](https://github.com/user-attachments/assets/5568adf1-9501-4a98-9cbe-cd3cb6ff3ade)
-![스크린샷 2024-08-04 오후 1 59 44](https://github.com/user-attachments/assets/3049d899-aa8b-402b-952f-cf8ecc0bee62)
+![Pasted image 20240804143431](https://github.com/user-attachments/assets/0eb792f1-82db-4483-b881-fd26852d3a1d)
+![Pasted image 20240804143458](https://github.com/user-attachments/assets/eb0c347c-63eb-4092-b899-e5704afef7b7)
+![Pasted image 20240804143518](https://github.com/user-attachments/assets/f572b6f2-4262-4a11-92a3-265ffc82da55)
 
 <br />
 
@@ -65,18 +65,20 @@ npm start
 ```
 
 4. 웹 브라우저에서 `http://localhost:3000`으로 접속합니다.
-   ![Pasted image 20240804140526](https://github.com/user-attachments/assets/2d5c64cf-1e6a-4ac6-ab40-90765d68c08c)
+![Pasted image 20240804143539](https://github.com/user-attachments/assets/72026564-8152-4894-baf4-06413eb6254b)
+
 
 
 5. "업로드" 버튼을 클릭하여 이미지를 선택합니다.
-   ![Pasted image 20240804140702](https://github.com/user-attachments/assets/a7d67fc7-7c14-4c73-bb0a-95570d6053d6)
+![Pasted image 20240804143555](https://github.com/user-attachments/assets/3eb0e311-782e-4be3-9a93-1f002d201cff)
+
 
 
 6. "결과 보기" 버튼을 클릭하여 닮은 연예인을 찾습니다.
 
 7. 분석 결과로 닮은 연예인의 이름과 이미지가 표시됩니다.
-   ![Pasted image 20240804140731](https://github.com/user-attachments/assets/239b2c01-2d02-4252-a80a-613a93b8b09e)
 
+![Pasted image 20240804143431](https://github.com/user-attachments/assets/0eb792f1-82db-4483-b881-fd26852d3a1d)
 
 > 주의: 이미지 분석에는 약간의 시간이 소요될 수 있습니다. 분석 중에는 "분석 중..." 메시지가 표시됩니다.
 
