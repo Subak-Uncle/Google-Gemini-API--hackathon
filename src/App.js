@@ -134,7 +134,7 @@ function App() {
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center bg-purple-100">
-                  <p className="text-purple-200 text-lg">
+                  <p className="text-purple-300 text-lg">
                     이미지를 업로드해주세요
                   </p>
                 </div>
@@ -153,7 +153,7 @@ function App() {
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center bg-purple-100">
-                  <p className="text-purple-400 text-lg">
+                  <p className="text-purple-300 text-lg">
                     결과가 여기에 표시됩니다
                   </p>
                 </div>
