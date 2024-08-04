@@ -95,13 +95,22 @@ function App() {
       setLoading(false);
     }
   };
-
   return (
-    <div>
-      <h1>닮은 연예인 찾기</h1>
-      <form name="frm" onSubmit={handleSubmit} encType="multipart/form-data">
-        <label className="input-file-button" htmlFor="input-file">
-          업로드
+    <div className="min-h-screen bg-purple-50 p-4 md:p-8">
+      <h1 className="text-3xl md:text-4xl font-bold text-center text-purple-400 mb-8">
+        닮은 연예인 찾기
+      </h1>
+      <form
+        name="frm"
+        onSubmit={handleSubmit}
+        encType="multipart/form-data"
+        className="max-w-7xl mx-auto"
+      >
+        <label
+          className="bg-purple-300 text-white px-6 py-3 rounded-lg cursor-pointer hover:bg-purple-500 transition duration-300 inline-block mb-6 text-lg"
+          htmlFor="input-file"
+        >
+          이미지 업로드
         </label>
         <input
           type="file"
@@ -110,34 +119,71 @@ function App() {
           accept="image/*"
           onChange={saveImgFile}
           ref={imgRef}
-          style={{ display: "none" }}
+          className="hidden"
         />
-        <div className="label-container">
-          <label htmlFor="yourImg">
-            <h1>나</h1>
-          </label>
-          <label htmlFor="resultImg">
-            <h1>연예인</h1>
-          </label>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <div className="text-center">
+            <h2 className="text-2xl font-bold mb-4 text-purple-300">나</h2>
+            <div className="w-full h-80 md:h-[600px] border-4 border-purple-300 rounded-3xl overflow-hidden">
+              {imgFile ? (
+                <img
+                  id="yourImg"
+                  src={imgFile}
+                  alt="Your Image"
+                  className="w-full h-full object-cover"
+                />
+              ) : (
+                <div className="w-full h-full flex items-center justify-center bg-purple-100">
+                  <p className="text-purple-200 text-lg">
+                    이미지를 업로드해주세요
+                  </p>
+                </div>
+              )}
+            </div>
+          </div>
+          <div className="text-center">
+            <h2 className="text-2xl font-bold mb-4 text-purple-300">연예인</h2>
+            <div className="w-full h-80 md:h-[600px] border-4 border-purple-300 rounded-3xl overflow-hidden">
+              {tmdbImg ? (
+                <img
+                  id="resultImg"
+                  src={tmdbImg}
+                  alt="Celebrity Image"
+                  className="w-full h-full object-cover"
+                />
+              ) : (
+                <div className="w-full h-full flex items-center justify-center bg-purple-100">
+                  <p className="text-purple-400 text-lg">
+                    결과가 여기에 표시됩니다
+                  </p>
+                </div>
+              )}
+            </div>
+          </div>
         </div>
-        <div className="image-container">
-          <img id="yourImg" src={imgFile} alt="Your Image" />
-          <img id="resultImg" src={tmdbImg} alt="Celebrity Image" />
-        </div>
-        <center>
-          <input
+        <div className="text-center">
+          <button
             type="submit"
             id="resultBtn"
-            className="btn"
-            value="결과 보기"
+            className="bg-white text-purple-400 border-2 border-purple-400 px-8 py-4 rounded-xl font-bold text-xl hover:bg-purple-400 hover:text-white transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
             disabled={loading}
-          />
-        </center>
+          >
+            결과 보기
+          </button>
+        </div>
       </form>
 
-      {loading && <p>분석 중...</p>}
-      {error && <p style={{ color: "red" }}>{error}</p>}
-      {celebrityName && <h1>닮은 연예인: "{celebrityName}"</h1>}
+      {loading && (
+        <p className="text-center mt-6 text-xl text-purple-400">분석 중...</p>
+      )}
+      {error && (
+        <p className="text-center mt-6 text-xl text-red-400">{error}</p>
+      )}
+      {celebrityName && (
+        <h2 className="text-3xl font-bold text-center mt-8 text-purple-400">
+          닮은 연예인: "{celebrityName}"
+        </h2>
+      )}
     </div>
   );
 }
